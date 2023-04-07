@@ -1,0 +1,133 @@
+<!DOCTYPE html><html><!--<![endif]--><head>
+	<base href="https://www.pepal.eu"/><meta charset="utf-8"/>
+	<title>PEPAL - Sup De Vinci</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="description" content=""/><meta name="author" content=""/>
+	<link href="/favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+	<link href="/favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"/>
+	<link href="/favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+	<link href="/favicons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+	<link href="/favicons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+	<link href="/favicons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+	<link href="/favicons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+	<link href="/favicons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+	<link href="/favicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+	<link href="/favicons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+	<link href="/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+	<link href="/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+	<link href="/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+	<link href="/favicons/manifest.json" rel="manifest"/><meta name="msapplication-TileColor" content="#ffffff"/><meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png"/><meta name="theme-color" content="#ffffff"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css"/>
+	<link href="https://www.pepal.eu/assets/built_login.css?v2.0.4" rel="stylesheet"/>
+</head>
+<body class="login">
+<div aria-hidden="true" class="modal fade" id="basic" role="basic" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header"><button aria-hidden="true" class="close" data-dismiss="modal" type="button"></button>
+<h4 class="modal-title"> </h4>
+</div>
+
+<div class="modal-body"> </div>
+
+<div class="modal-footer"> </div>
+</div>
+</div>
+</div>
+<!-- BEGIN LOGO -->
+
+<div class="logo"><a href="https://www.pepal.eu"><img alt="SDV" class="logo-ecole" src="/assets/logos/logo_sdv.png"/> </a></div>
+<!-- END LOGO -->
+
+<div class="content" id="bloc-login">
+<form action="" class="login-form" method="post" novalidate="novalidate"><input name="__original_url" type="hidden" value="https://www.pepal.eu"/> <input class="display-hide" name="chrome_fake_login" type="text"/> <input class="display-hide" name="password" type="password"/>
+<div class="div-identification">
+<h3 class="form-title">Identification</h3>
+<img alt="Pepal" class="logo-pepal" src="/images/logo_login_2.png"/></div>
+
+<div class="display-hide" id="verif_acces">
+<div class="progress progress-striped active">
+<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" class="progress-bar progress-bar-info" role="progressbar" style="width: 100%"><span>Vérification des accès </span></div>
+</div>
+</div>
+
+<div class="alert alert-danger display-hide"><button class="close" data-close="alert"></button><span>Entrer un identifiant et un mot de passe. </span></div>
+
+<div class="alert alert-warning alert-login-invalid display-hide"><button class="close" data-close="alert"></button><span>Identifiant ou mot de passe incorrect. </span></div>
+
+<div class="form-group"><!--ie8, ie9 does not support html5 placeholder, so we just show field title for that--><label class="control-label visible-ie8 visible-ie9">Identifiant</label>
+
+<div class="input-icon"><input autocomplete="on" class="form-control placeholder-no-fix" id="username" name="username" placeholder="Identifiant" type="text"/></div>
+</div>
+
+<div class="form-group"><label class="control-label visible-ie8 visible-ie9">Mot de passe</label>
+
+<div class="input-icon"><input autocomplete="on" class="form-control placeholder-no-fix" id="password" name="password" placeholder="Mot de passe" type="password"/></div>
+</div>
+
+<div class="form-actions"><button class="btn blue pull-right" id="login_btn" type="submit">Login</button></div>
+
+<div class="forget-password">
+<h4>Mot de passe oublié ?</h4>
+
+<p>pas de problème, <a class="btn btn-sm btn-primary" href="javascript:;" id="forget-password">cliquez ici</a> pour recevoir votre mot de passe.</p>
+</div>
+</form>
+<!-- BEGIN FORGOT PASSWORD FORM -->
+
+<form action="" class="forget-form" id="frm_forgot"><input name="__original_url" type="hidden" value="https://www.pepal.eupost"/>
+<h3>Mot de passe oublié ?</h3>
+<input name="act" type="hidden" value="password_lost"/>
+<p>Entrez votre identifiant ci-dessous</p>
+
+<div class="form-group">
+<div class="input-icon"><input autocomplete="off" class="form-control placeholder-no-fix" name="identifiant" placeholder="Identifiant" type="text"/></div>
+</div>
+
+<div class="alert alert-info">Si vous ne connaissez pas votre identifiant : contactez <a href="mailto:support.pepal@supdevinci.fr">support.pepal@supdevinci.fr</a></div>
+
+<div class="form-actions"><button class="btn" id="back-btn" type="button">Back</button><button class="btn blue pull-right" id="btn_send" type="button">Envoyer</button></div>
+</form>
+<!-- END FORGOT PASSWORD FORM --></div>
+<!-- BEGIN PORTAILS -->
+
+<div class="content changer-portail">
+<h4>Changer de portail :</h4>
+
+<div class="portails">
+<div class="conteneur-portail"><a href="https://pepal.afclarochelle.fr"><img alt="AFC" class="logo-portail" src="/assets/logos/logo_afc.png?V=1"/> </a></div>
+
+<div class="conteneur-portail"><a href="https://pepal.aforem.fr"><img alt="Aforem" class="logo-portail" src="/assets/logos/logo_aforem.png"/> </a></div>
+
+<div class="conteneur-portail"><a href="https://pepal.isme.fr"><img alt="ISME" class="logo-portail" src="/assets/logos/logo_isme.png"/> </a></div>
+</div>
+</div>
+<!-- END PORTAILS -->
+
+<div class="copyright">Portail d&#39;Echange des Partenaires de l&#39;Alternance du Groupe SDV Éducation<br/>
+© 2023</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script><script src="https://www.pepal.eu/assets/built_login.js?v2.0.0"></script><script>
+        $('#btn_send').on('click', function (evt) {
+        evt.stopImmediatePropagation();
+        App.blockUI({target: '#bloc-login' ,boxed: true ,iconOnly: false, message: 'Envois en cours...'});
+
+        var formData = new FormData($('#frm_forgot')[0]);
+        var posting = $.ajax({
+            url: '/ajax.inc.php', type: 'POST', data: formData,
+            cache: false, contentType: false, processData: false
+        });
+        posting.done(function (data) {
+            App.unblockUI('#bloc-login');
+            if (data != 'null') {
+                eval(data);
+            }
+        });
+    });
+
+    $('#username').focus();
+    $(function () {
+        Login.init()
+    });
+</script>
+
+</body>
+</html>
