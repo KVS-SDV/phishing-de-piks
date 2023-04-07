@@ -1,0 +1,1928 @@
+<!DOCTYPE html><html lang="fr"><head>
+	<title>CIC</title>
+	<meta name="espace" content="Aucun"/>
+
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_base.css"/>
+    <script type="text/javascript" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/javascript/appli/jquery_ei.js"></script>
+    <script type="text/javascript" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/javascript/appli/lightbox.js"></script>
+    <script type="text/javascript" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/javascript/appli/ei_tools.js"></script>
+
+
+<style>.ei_ident #ei_tpl_fullsite {padding-top: 130px;}
+@media screen and (max-width: 999px) {.ei_ident #ei_tpl_fullsite {padding-top: 90px;}}</style>
+
+
+
+	<script src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/javascript/appli/env.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnii.e-i.com/SRCH/sd/exalead/1.11.6/javascripts/ajax_search.js"></script>
+	<script src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/javascript/appli/env_menu.js" type="text/javascript"></script>
+	<script src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/javascript/appli/env_menu_ally.js" type="text/javascript"></script>
+	<link href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_custom_responsive.css" rel="stylesheet" type="text/css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/std/favicons/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/std/favicons/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/std/favicons/favicon-16x16.png"/>
+    <link rel="manifest" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/std/favicons/site.webmanifest"/>
+    <link rel="mask-icon" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/std/favicons/safari-pinned-tab.svg" color="#ffffff"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="theme-color" content="#ffffff"/>
+
+<script type="text/javascript" src="https://cdnii.e-i.com/SOSD/sd/session_utils/1.0.1/scripts/sessionUtils.min.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_needscript.css"/>
+<script type="text/javascript" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/javascript/SDTK/display.js"></script>
+<script type="text/javascript" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/javascript/appli/lightbox.js"></script>
+
+	<link href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_custom_richradbutton.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="https://cdnii.e-i.com/SITW/sd/tools/2.2.2/javascripts/SITW-tools.js"></script>
+
+
+    <script type="text/javascript">
+        if ($("#ei_tpl_ident_ok").length > 0) {
+            $("body").addClass("ei_tpl_conseil_ident");
+        }
+    </script>
+
+<!-- Datasinks V1 -->
+<script type="text/javascript">
+    //return the value of a cookie
+function dclic_getCookie(nomCookie) {
+    deb = document.cookie.indexOf(nomCookie + "=");
+    if (deb >= 0) {
+        deb += nomCookie.length + 1;
+        fin = document.cookie.indexOf(";", deb);
+        if (fin < 0) {
+            fin = document.cookie.length;
+        }
+        return unescape(document.cookie.substring(deb, fin));
+    } else {
+        return "";
+    }
+}
+
+//create dclic cookie in local path
+function dclic_setLocalCookie(value) {
+    if (value) {
+        var date = new Date();
+        date.setTime(date.getTime() + (13 * 30 * 24 * 60 * 60 * 1000));
+        document.cookie = "dclic_tid_local=" + value + "; expires=" + date.toUTCString() + "; path=/; secure";
+    }
+}
+
+//return current origin
+function dclic_getOrigin() {
+    return window.location.origin;;
+}
+
+//return true if tracking is allowed in browser
+function dclic_isTrackingAllowed() {
+    return typeof(navigator) != "undefined" &&
+        navigator.doNotTrack != "1" &&
+        navigator.msDoNotTrack != "1" &&
+        typeof(window) != "undefined" &&
+        window.doNotTrack != "1";
+}
+
+// check for accepted solution
+function dclic_isSolutionAccepted(solution) {
+    var euConsent = "";
+    // Recuperation du cookie
+    var cookieName = "eu-consent=";
+    var ca = document.cookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === " ") {
+            c = c.substring(1, c.length);
+        }
+        if (c.indexOf(cookieName) === 0) {
+            euConsent = c.substring(cookieName.length, c.length);
+        }
+    }
+
+    if (euConsent !== undefined && euConsent !== "") {
+        euConsent = JSON.parse(decodeURIComponent(euConsent));
+
+        var path = document.location.pathname;
+
+        // Selection du chemin dans le cookie correspondant le mieux a l'url de la page courante
+        var matchs = [];
+        Object.keys(euConsent).forEach(function(acceptancePath) {
+            if (path.substring(0, acceptancePath.length) === acceptancePath) {
+                matchs.push(acceptancePath);
+            }
+        });
+        matchs = matchs.sort(function(a, b) {
+            return b.length - a.length;
+        });
+
+        // Retour
+        if (matchs.length > 0 && euConsent[matchs[0]]["solutions"].hasOwnProperty(solution)) {
+            return euConsent[matchs[0]]["solutions"][solution];
+        }
+    }
+    return false;
+}
+
+
+//check if user allowed DCLIC to collect data
+function dclic_checkUserConsent() {
+    return dclic_isSolutionAccepted("DCLIC") === true ||
+    ((typeof(dclic_getCookie) != "undefined" && dclic_getCookie('cookies_accepted') != null && dclic_getCookie('cookies_accepted') != "")
+        && (dclic_getCookie('cookies_accepted') == "1" || dclic_getCookie('cookies_accepted').match("cookie_marketing=true") ) );
+}
+
+//read value in dataElement depending on multiple indices
+function dclic_readDatalayer(datalayer, indices) {
+    if (!indices instanceof Array) {
+        return undefined;
+    }
+    if (indices.length == 0) {
+        return datalayer;
+    }
+
+    if (datalayer === undefined) {
+        return undefined;
+    }
+
+    id = indices.shift();
+
+    if ((datalayer instanceof Array && id < datalayer.length) ||
+        (datalayer instanceof Map && datalayer.has(id)) ||
+        (datalayer instanceof Object && id in datalayer)) {
+        return dclic_readDatalayer(datalayer[id], indices);
+    }
+    return undefined;
+}
+
+var dclic_UrlSearchParams = {
+    getSearchObject: function(query) {
+        return query ?
+            (/^[?#]/.test(query) ? query.slice(1) : query)
+            .split("&")
+            .reduce(function(params, param) {
+                var splitted = param.split("=");
+                var key = splitted[0];
+                var value = splitted[1];
+                params[key] = value ?
+                    value :
+                    "";
+                return params;
+            }, {}) :
+            {};
+    },
+    getAll: function(query) {
+        return dclic_UrlSearchParams.getSearchObject(query);
+    },
+    get: function(query, param) {
+        var searchParams = dclic_UrlSearchParams.getSearchObject(query);
+        return searchParams[param];
+    }
+};
+
+
+//return a specific value of a parameter in querystring
+function dclic_getUrlParameter(name) {
+    return dclic_UrlSearchParams.get(window.location.search, name);
+    /*name = name.replace([[], '[').replace([]], ']');
+    var regex = new RegExp('[&]' + name + '=([^&#])');
+    var results = regex.exec(location.search);
+    return results === null  ''  decodeURIComponent(results[1].replace(+g, ' '));*/
+}
+
+var dclicClient = {
+    info: {
+        v: "1.0.0"
+    },
+    watMap: {
+        "user_niveau":"s21",
+"user_space":"s17",
+"dir_reg":"s13",
+"cat_juridique":"s14",
+"env_marque":"s24",
+"user_frequence_bad":"s10",
+"env_langue":"s12",
+"user_formule_bad":"s4",
+"user_federation":"s2",
+"env_channel":"s22",
+"typepage":"s16",
+"statutuser":"s18",
+"data_ga_dispositif":"s150",
+"user_segment":"s8",
+"user_type_client":"s5",
+"user_agence":"s3",
+"page_cat1":"s26",
+"page_cat3":"s28",
+"page_cat2":"s27",
+"page_cat5":"s30",
+"page_cat4":"s29",
+"env_espace":"s15",
+"env_country":"s25",
+"user_segment_commercial":"s9",
+"substitution_mode":"s19",
+"env_work":"s11",
+"espace":"s1",
+"user_type_personne":"s20",
+"relation_group":"s23"
+    },
+
+    init: function() {
+        if (typeof(dclic_setLocalCookie) != "undefined" && (dclic_getCookie('dclic_tid_local') == null || dclic_getCookie('dclic_tid_local') == "")) {
+            dclic_setLocalCookie();
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            dclicClient.pushEvent("Page Viewed");
+        });
+    },
+    setEid: function(value) {
+        dclicClient.info.eid = value;
+    },
+    setAid: function(value) {
+        dclicClient.info.aid = value;
+    },
+    pushEvent: function(name, payload) {
+        if (dclic_isTrackingAllowed() && dclic_checkUserConsent()) {
+            var evt = {};
+            payload = payload || {};
+
+            $.extend(evt, payload);
+
+            if (typeof watData !== 'undefined' && typeof tc_vars !== 'undefined') {
+                Object.assign(watData, tc_vars);
+            }
+
+            Object.keys(dclicClient.watMap).forEach(function(key, index) {
+                if (typeof watData !== 'undefined') {
+                    if (watData.hasOwnProperty(key)) {
+                        evt[dclicClient.watMap[key]] = watData[key];
+                    }
+                }
+            });
+
+            $.extend(evt, dclicClient.info);
+            $.extend(evt, {
+                origin:dclic_getOrigin(),
+ps:(document.referrer.length > 0 && document.referrer.lastIndexOf(window.location.origin, 0) === 0 ? (function parseurl() { var parser = document.createElement('a'); parser.href = document.referrer; return parser.pathname.substring(0, 255); })() : ""),
+tz:new Date().getTimezoneOffset(),
+pt:document.title,
+px:Math.round(window.pageXOffset),
+py:Math.round(window.pageYOffset),
+s7:(typeof alias !== "undefined" ? alias : ""),
+s6:(typeof clientreconnu !== "undefined" && clientreconnu === "Y" ? true : false),
+pc:window.location.pathname.substring(0, 255),
+dl:document.documentElement.lang,
+s11:(window.location.href.split('/')[2].charAt(3) === "-") ? window.location.href.split("/")[2].split("-")[0] : "prod",
+bs:window.innerWidth + "x" + window.innerHeight,
+e:name,
+ss:window.screen.width + "x" + window.screen.height,
+oc:new Date().toISOString(),
+s44:dclic_getUrlParameter("utm_source"),
+s45:dclic_getUrlParameter("utm_medium"),
+s46:dclic_getUrlParameter("utm_campaign"),
+s47:dclic_getUrlParameter("utm_term"),
+s43:(typeof url_page !== "undefined") ? url_page : "",
+sc:window.screen.colorDepth,
+s48:dclic_getUrlParameter("utm_content"),
+s49:dclic_getUrlParameter("codepromo")
+            });
+
+            $.ajax({
+                url: "https://dclic-events.e-i.com/",
+                type: "POST",
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                },
+                crossDomain: true,
+                contentType: "application/json",
+                data: JSON.stringify({
+                    dclic_tid_local: dclic_getCookie("dclic_tid_local"),
+                    data: evt
+                }),
+                dataType: "json",
+                xhrFields: {
+                    withCredentials: true
+                },
+                success: function(res) {
+                    var tid = null;
+                    if (res) {
+                        tid = res.dclic_tid;
+                        dclic_setLocalCookie(res.dclic_tid);
+                    }
+                    setTimeout(function() {
+                        dclicClient.resolve(tid);
+                    }, 5000);
+                }
+            });
+        }
+    },
+    resolve: function(dclic_tid) {
+        var url = "https://dclic-resolver.e-i.com/";
+        if (dclic_tid) {
+            url += dclic_tid;
+        }
+        $.ajax({
+            url: url,
+            type: "GET",
+            headers: {
+                "Access-Control-Allow-Origin": "*"
+            },
+            crossDomain: true,
+            contentType: "application/json",
+            data: {
+                origin: dclic_getOrigin()
+            },
+            dataType: "json",
+            xhrFields: {
+                withCredentials: true
+            },
+            success: function(res, status) {
+                if (res !== null && 'dclicseg' in res) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (13 * 30 * 24 * 60 * 60 * 1000));
+                    document.cookie = "dclic_seg=" + res.dclicseg + "; expires=" + date.toUTCString() + "; path=/; secure";
+                }
+            }
+        });
+    }
+};
+
+dclicClient.init();
+
+
+function eia(action, data) {
+    if (action === "set") {
+        dclicClient.setEid(data.eid);
+        dclicClient.setAid(data.aid);
+    }
+}
+
+
+//allow dclic to be called on consent update
+document.addEventListener("DOMContentLoaded", function() {
+  if (typeof(euConsentOnUpdate) == "function") {
+      if (typeof(DISABLE_EI_EU_CONSENT_MODAL) == "undefined" || DISABLE_EI_EU_CONSENT_MODAL == false) {
+          euConsentOnUpdate(function() { dclicClient.pushEvent("Page Viewed"); });
+      }
+  }
+});
+    
+</script>
+<!-- Datasinks V1 -->
+<!-- Datasinks V2 -->
+<script type="text/javascript">
+    /*
+function getCookieDatasinks(nomCookie) {
+    deb=document.cookie.indexOf(nomCookie+"=");
+    if (deb>=0) {
+        deb+=nomCookie.length+1;
+        fin=document.cookie.indexOf(";",deb);
+        if (fin<0) {
+            fin=document.cookie.length;
+        }
+    return unescape(document.cookie.substring(deb,fin));
+    }
+    else { 
+        return "";
+    }
+}
+
+function isSolutionAccepted(solution) {
+    var euConsent = "";
+    // Récupération du cookie
+    var cookieName = "eu-consent=";
+    var ca = document.cookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === " ") {
+        c = c.substring(1, c.length);
+      }
+      if (c.indexOf(cookieName) === 0) {
+        euConsent = c.substring(cookieName.length, c.length);
+      }
+    }
+  
+    if (euConsent !== undefined && euConsent !== "") {
+      euConsent = JSON.parse(euConsent);
+  
+      var path = document.location.pathname;
+  
+      // Sélection du chemin dans le cookie correspondant le mieux à l’url de la page courante
+      var matchs = [];
+      Object.keys(euConsent).forEach(function(acceptancePath) {
+        if (path.substring(0, acceptancePath.length) === acceptancePath) {
+          matchs.push(acceptancePath);
+        }
+      });
+      matchs = matchs.sort(function(a, b) {
+        return b.length - a.length;
+      });
+  
+      // Retour
+      if (matchs.length > 0 && euConsent[matchs[0]]["solutions"].hasOwnProperty(solution)) {
+        return euConsent[matchs[0]]["solutions"][solution];
+      }
+    }
+    return false;
+}
+
+var isTrackDatasinks = typeof(navigator) != "undefined" && navigator.doNotTrack != "1" && navigator.msDoNotTrack != "1" && typeof(window) != "undefined" && window.doNotTrack != "1";
+var isConsentDatasinks = 
+isSolutionAccepted("DCLIC") === true ||
+((typeof(getCookieDatasinks) != "undefined" && getCookieDatasinks('cookies_accepted') != null && getCookieDatasinks('cookies_accepted') != "") && (getCookieDatasinks('cookies_accepted') == "1" || getCookieDatasinks('cookies_accepted').match("cookie_marketing=true")));
+
+if (isTrackDatasinks && isConsentDatasinks && false) {
+    (function(l, o, a, d, i, n, g) {
+        l.__ds_name__ = i;
+        l[i] = l[i] || function(m) {
+            m = m || "_default";
+            return l[i][m] = l[i][m] || function s(o, f) {
+                if (
+                    o + f === "usertraits") return function t() {
+                    (t._q = t._q || []).push(arguments)
+                };
+                s !== l[i][m] && l[i][m].apply(null, arguments) || (s._q = s._q || []).push(arguments)
+            }
+        };
+        n = o.createElement(a);
+        g = o.getElementsByTagName(a)[0];
+        n.async = 1;
+        n.src = d;
+        g.parentNode.insertBefore(n, g)
+    })(window, document, "script", "https://cdnii.e-i.com/SDUT/sd/datasinks/0.1.0/js/ds.min.js", "ds");
+    if (typeof ds === "function") {
+        ds()("init", {
+            api: "https://ingester.ds2.e-i.com/ing1",
+            seg: "https://ingester.ds2.e-i.com/aud1/segments",
+            pid: "ef70ea6a",
+            cookieDuration: 395
+        });
+        ds()("segments", function(segs) {
+            setTimeout(function() {
+                if (segs.length > 0) {
+                    // Datasinks V2 segments cookie: max-age=one year
+                    document.cookie = "dsseg=" + segs.join('') + "; max-age=31536000; path=/";
+                }
+            }, 5000);
+        });
+    }
+}
+*/
+    
+</script>
+<!-- Datasinks V2 -->
+
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_custom_messenger.css"/>
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_custom_scrollzone.css"/>
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_custom_carousel.css"/>
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_custom_rating.css"/>
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_custom_richradbutton.css"/>
+
+
+</head>
+<body>
+
+
+
+
+<nav role="navigation" aria-label="Liens d&#39;évitement">
+    <ul id="e_raccourci">
+        <li class="ei_quicklink_vitrine"><a href="#ei_quicklink_content">Contenu principal</a></li>
+        <li class="ei_quicklink_transac"><a href="#ei_tpl_content">Contenu principal</a></li>
+        <li class="ei_quicklink_vitrine"><a href="/fr/authentification.html">Espace client</a></li>
+        <li class="eir_hidexs ei_quicklink_vitrine"><a href="#ei_quicklink_menu">Menu principal</a></li>
+        <li class="eir_hidexs ei_quicklink_vitrine"><a href="#ei_quicklink_search">Zone de recherche</a></li>
+        <li class="ei_quicklink_vitrine"><a href="#ei_quicklink_header">Entête de page</a></li>
+        <li class="ei_quicklink_vitrine"><a href="#ei_quicklink_footer">Pied de page</a></li>
+        <li class="ei_quicklink_transac"><a href="#ei_tpl_footer">Pied de page</a></li>
+        <li class="ei_quicklink_transac"><a href="/fr/services/messagerie-conversation.html" aria-label="votre conseiller (nouvelle fenêtre)" target="_blank">Votre conseiller</a></li>
+    </ul>
+</nav>
+<div id="ei_tpl_menuMobil">
+    <div id="ei_tpl_mMobContent">
+        <div id="ei_tpl_mMobPrincipal"></div>
+    </div>
+</div>
+<div id="ei_tpl_fullsite" class="ei_tpl_conseil ei_nobackground ei_ident ei_cic2015">	
+    <a id="ei_quicklink_header" tabindex="-1"></a>
+    <header id="ei_tpl_head" role="banner" data-sticky="">
+        <div id="ei_tpl_head_center">
+            <div class="ei_tpl_head_table">
+                <div class="ei_tpl_head_td" id="ei_tpl_menuLink">
+                    <button type="button" id="burgerlink" class="ei_menu__burger" aria-expanded="false">
+    <span class="ei_menu__burgerbox">
+        <span class="ei_menu__burgerline"></span>
+    </span>
+    <span class="ei_menu__burgerlabel">Menu</span>
+</button>
+
+                </div>
+                <div class="ei_tpl_head_td" id="ei_tpl_logo">
+                    
+<a href="/fr/index.html" title="CIC Accueil">
+    <img src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/css/env/logo.svg" alt="CIC"/>
+</a>
+
+                </div>
+                <div class="ei_tpl_head_td" id="ei_tpl_baseline">
+                    <p>Construisons dans un monde qui bouge</p>
+                </div>
+                <div class="ei_tpl_head_td" id="ei_tpl_search">
+                    <a id="ei_quicklink_search" tabindex="-1"></a>
+                    <form autocomplete="off" action="" method="get" name="form_rechercher" class="CMSD_search ei_srchbar_form" role="search" id="SRCH_form_header">
+    <label class="e_invisible" for="SRCH_top">Rechercher</label>
+    <input required="required" type="text" id="SRCH_top" class="pQuery SRCH_input ei_srchbar_input" onfocus="fc_search_focus(true)" oninvalid="this.setCustomValidity(&#39;Merci de saisir votre demande&#39;)" oninput="setCustomValidity(&#39;&#39;)" title="Rechercher" placeholder="Rechercher" name="pQuery" role="combobox" aria-expanded="true" aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" aria-controls="lstresult" aria-activedescendant="op1"/>
+    <div class="autocomplete_search_top autocomplete_search" style="display:none;"></div>
+    <button class="ei_srchbar_button" type="submit" title="Lancer la recherche">
+        <span class="ei_sronly">Lancer la recherche</span>
+        <span class="ei_srchbar_glyph" aria-hidden="true"></span>
+    </button>
+</form>
+
+
+<script type="text/javascript">
+var srchConfig = {
+  redirectUrl: "/fr/SearchRedirect.aspx",
+  searchAjaxUrl: "/fr/SearchAjax.html",
+  formUrl: "/fr/search_engine.html"
+};
+</script>
+ 
+                </div>
+                <div id="ei_tpl_devenirclient" class="ei_tpl_head_td"><div class="ei_tpl_dclient_content"><div><p class="ei_tpl_dclient_title"><a href="https://www.cic.fr/fr/banques/devenir-client.html">Devenir client</a></p><p>du CIC</p></div></div></div>
+                <div class="ei_tpl_head_td ei_tpl_ident">
+                    <div id="ei_tpl_ident">
+    <div id="ei_tpl_login">
+    
+    <p class="ei_tpl_ident_login_title"><a id="ei_tpl_ident_link" href="/fr/authentification.html">Espace client</a></p>
+    <p class="ei_tpl_ident_login_subtitle">Connexion</p>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="ei_tpl_menuPrincipal" data-sticky="">
+		<div id="ei_tpl_searchmobil">
+			<form autocomplete="off" action="" method="get" name="form_rechercher" class="CMSD_search ei_srchbar_form" role="search" id="SRCH_form_mobile">
+    <label class="e_invisible" for="SRCH_top_mobile">Rechercher</label>
+    <input required="required" type="text" id="SRCH_top_mobile" class="pQuery SRCH_input ei_srchbar_input" oninvalid="this.setCustomValidity(&#39;Merci de saisir votre demande&#39;)" oninput="setCustomValidity(&#39;&#39;)" title="Rechercher" placeholder="Rechercher" name="pQuery" role="combobox" aria-expanded="true" aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" aria-controls="lstresult" aria-activedescendant="op1"/>
+    <div class="autocomplete_search_top autocomplete_search" style="display:none;"></div>
+    <button class="ei_srchbar_button" type="submit" title="Lancer la recherche">
+        <span class="ei_sronly">Lancer la recherche</span>
+        <span class="ei_srchbar_glyph" aria-hidden="true"></span>
+    </button>
+</form>
+
+
+<script type="text/javascript">
+var srchConfig = {
+  redirectUrl: "/fr/SearchRedirect.aspx",
+  searchAjaxUrl: "/fr/SearchAjax.html",
+  formUrl: "/fr/search_engine.html"
+};
+</script>
+		</div>
+        <a id="ei_quicklink_menu" tabindex="-1"></a>
+         <nav id="CMSD_MENU" aria-label="menu principal" role="navigation">
+            <!-- Menu.Net MenuHandler-->        <ul>
+            
+            <li id="ei_m_accueil" class="e_smenumiddle">
+                <a target="_self" data-page="153006" href="/fr/banques/particuliers/index.html">
+                    Accueil</a>
+                    </li>
+            
+            <li id="es_menu_espace_particulier" class="e_menuinline cc_menu_espace">
+                <a target="_self" data-page="150398" href="/fr/banques/particuliers/index.html">
+                    Particuliers</a>
+                    <div class="e_smenu">
+                                        <ul>
+                                
+                                <li class="e_menudepliant  e_smenumiddle">
+                                    <a target="_self" data-page="150399" href="/fr/banques/particuliers/gestion-courante.html">
+                                        Comptes et Cartes</a>
+                                        <div class="e_smenu">
+                                            <div class="e_smenu_content">
+                                                                    <ul class="e_menuCol1">
+                                                    <li class="e_menu_srub e_dropdown">
+                                                        <a target="_self" data-page="150401" href="#">
+                                                            Nos conseils</a>
+                                                            <div class="e_smenu">
+                                                                                <ul>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="238419" href="/fr/particuliers/comptes/choisir-carte-bancaire.html">
+                                                                                Choisir votre carte bancaire</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150400" href="/fr/particuliers/comptes/choisir-compte.html">
+                                                                                Choisir votre compte</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="262434" href="/fr/banques/particuliers/gestion-courante/regler-vos-depenses/index.html">
+                                                                                Régler vos dépenses</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150402" href="/fr/banques/particuliers/gestion-courante/optimiser-votre-budget/index.html">
+                                                                                Optimiser votre budget</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150403" href="/fr/particuliers/comptes/paiement-en-ligne-securite.html">
+                                                                                Sécuriser vos opérations</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150454" href="/fr/protection-des-donnees-personnelles/index.html">
+                                                                                Protection des données</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150453" href="/fr/banques/particuliers/nous-contacter/simulations-souscriptions.html">
+                                                                                Simulations et souscriptions</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="267621" href="/fr/banques/particuliers/gestion-courante.html">
+                                                                                <b>Toutes nos offres de comptes et cartes</b></a>
+                                                                                </li>
+                                                                    </ul>
+                                                    
+                                                            </div>
+                                                            </li>
+                                                    </ul><ul class="e_menuCol2">
+                                                    <li class="e_menu_srub">
+                                                        <a target="_self" data-page="262412" href="#">
+                                                            Tout sur</a>
+                                                            <div class="e_smenu">
+                                                                                <ul>
+                                                                        
+                                                                        <li class="ei_mconseil_maison">
+                                                                            <a target="_self" data-page="262431" href="/fr/particuliers/cic-mission-immo.html">
+                                                                                Votre logement</a>
+                                                                                </li>
+                                                                    </ul>
+                                                    
+                                                            </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </li>
+                                
+                                <li class="e_menudepliant e_smenumiddle">
+                                    <a target="_self" data-page="150456" href="/fr/banques/particuliers/epargne.html">
+                                        Épargne</a>
+                                        <div class="e_smenu">
+                                            <div class="e_smenu_content">
+                                                                    <ul class="e_menuCol1">
+                                                    <li class="e_menu_srub e_dropdown">
+                                                        <a target="_self" data-page="262692" href="#">
+                                                            Nos conseils</a>
+                                                            <div class="e_smenu">
+                                                                                <ul>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150457" href="/fr/particuliers/epargne/livrets-epargne.html">
+                                                                                Découvrir nos livrets d’épargne</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150458" href="/fr/banques/particuliers/epargne/epargner-pour-un-projet/index.html">
+                                                                                Épargner pour un projet</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150459" href="/fr/banques/particuliers/epargne/valoriser-et-transmettre-un-patrimoine/index.html">
+                                                                                Valoriser un patrimoine</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="251883" href="/fr/particuliers/epargne/transmettre-un-patrimoine.html">
+                                                                                Transmettre un patrimoine</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="213068" href="/fr/banques/particuliers/epargne/epargner-pour-votre-retraite/index.html">
+                                                                                Épargner pour votre retraite</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150460" href="/fr/banques/particuliers/epargne/optimiser-votre-fiscalite/index.html">
+                                                                                Optimiser votre fiscalité</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="267907" href="/fr/banques/particuliers/nous-contacter/simulations-souscriptions.html">
+                                                                                Simulations et souscriptions</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="267847" href="/fr/banques/particuliers/epargne.html">
+                                                                                <b>Toutes nos offres d&#39;épargne</b></a>
+                                                                                </li>
+                                                                    </ul>
+                                                    
+                                                            </div>
+                                                            </li>
+                                                    </ul><ul class="e_menuCol2">
+                                                    <li class="e_menu_srub">
+                                                        <a target="_self" data-page="262697" href="#">
+                                                            Tout sur</a>
+                                                            <div class="e_smenu">
+                                                                                <ul>
+                                                                        
+                                                                        <li class="ei_mconseil_maison">
+                                                                            <a target="_self" data-page="262698" href="/fr/particuliers/cic-mission-immo.html">
+                                                                                Votre logement</a>
+                                                                                </li>
+                                                                    </ul>
+                                                    
+                                                            </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </li>
+                                
+                                <li class="e_menudepliant e_smenumiddle">
+                                    <a target="_self" data-page="150514" href="/fr/banques/particuliers/credits.html">
+                                        Crédits</a>
+                                        <div class="e_smenu">
+                                            <div class="e_smenu_content">
+                                                                    <ul class="e_menuCol1">
+                                                    <li class="e_menu_srub e_dropdown">
+                                                        <a target="_self" data-page="262699" href="#">
+                                                            Nos conseils</a>
+                                                            <div class="e_smenu">
+                                                                                <ul>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150515" href="/fr/banques/particuliers/credits/acheter-un-vehicule/index.html">
+                                                                                Acheter un véhicule</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150517" href="/fr/banques/particuliers/credits/acheter-un-logement/index.html">
+                                                                                Acheter un logement</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150520" href="/fr/banques/particuliers/credits/realiser-des-travaux/index.html">
+                                                                                Financer des travaux</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="259124" href="/fr/particuliers/credits/financer-vos-projets-personnels/index.html">
+                                                                                Financer vos projets personnels</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150574" href="/fr/banques/particuliers/credits/financer-imprevus.html">
+                                                                                Financer vos imprévus</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150518" href="/fr/banques/particuliers/credits/financer-des-etudes/index.html">
+                                                                                Financer des études</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150519" href="/fr/banques/particuliers/credits/financer-le-permis-de-conduire/index.html">
+                                                                                Financer le permis de conduire</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="150575" href="/fr/banques/particuliers/nous-contacter/simulations-souscriptions.html">
+                                                                                Simulations et souscriptions</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content">
+                                                                            <a target="_self" data-page="267852" href="/fr/banques/particuliers/credits.html">
+                                                                                <b>Toutes nos offres de crédit</b></a>
+                                                                                </li>
+                                                                    </ul>
+                                                    
+                                                            </div>
+                                                            </li>
+                                                    </ul><ul class="e_menuCol2">
+                                                    <li class="e_menu_srub">
+                                                        <a target="_self" data-page="262700" href="#">
+                                                            Tout sur</a>
+                                                            <div class="e_smenu">
+                                                                                <ul>
+                                                                        
+                                                                        <li class="ei_mconseil_maison">
+                                                                            <a target="_self" data-page="262701" href="/fr/particuliers/cic-mission-immo.html">
+                                                                                Votre logement</a>
+                                                                                </li>
+                                                                    </ul>
+                                                    
+                                                            </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </li>
+                                
+                                <li class="e_menudepliant e_smenumiddle">
+                                    <a target="_self" data-page="150576" href="/fr/banques/particuliers/assurances-CIC/index.html">
+                                        Assurances</a>
+                                        <div class="e_smenu">
+                                            <div class="e_smenu_content">
+                                                                    <ul class="e_menuCol1">
+                                                    <li class="e_menu_srub e_dropdown">
+                                                        <a target="_self" data-page="262742" href="#">
+                                                            Nos conseils</a>
+                                                            <div class="e_smenu">
+                                                                                <ul>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="150577" href="/fr/banques/particuliers/assurances-CIC/assurer-votre-vehicule/index.html">
+                                                                                Assurer votre véhicule</a>
+                                                                                </li>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="150578" href="/fr/banques/particuliers/assurances-CIC/assurer-votre-logement/index.html">
+                                                                                Assurer votre logement</a>
+                                                                                </li>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="150626" href="/fr/particuliers/assurance-CIC/proteger-votre-logement.html">
+                                                                                Protéger votre logement</a>
+                                                                                </li>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="150579" href="/fr/banques/particuliers/assurances-CIC/couvrir-vos-depenses-de-sante/index.html">
+                                                                                Couvrir vos dépenses de santé</a>
+                                                                                </li>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="150581" href="/fr/banques/particuliers/assurances-CIC/assurer-votre-famille/index.html">
+                                                                                Assurer votre famille</a>
+                                                                                </li>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="150622" href="/fr/banques/particuliers/assurances-CIC/maintenir-vos-revenus/index.html">
+                                                                                Maintenir vos revenus</a>
+                                                                                </li>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="150624" href="/fr/banques/particuliers/assurances-CIC/vous-assurer-un-complement-de-retraite/index.html">
+                                                                                Vous assurer un complément de retraite</a>
+                                                                                </li>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="150625" href="/fr/banques/particuliers/assurances-CIC/assurer-vos-animaux-et-vos-loisirs/index.html">
+                                                                                Assurer vos animaux et vos loisirs</a>
+                                                                                </li>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="150623" href="/fr/banques/particuliers/assurances-CIC/vous-proteger-au-quotidien/index.html">
+                                                                                Vous protéger au quotidien</a>
+                                                                                </li>
+                                                                        
+                                                                        <li>
+                                                                            <a target="_self" data-page="267905" href="/fr/banques/particuliers/nous-contacter/simulations-souscriptions.html">
+                                                                                Simulations et souscriptions</a>
+                                                                                </li>
+                                                                        
+                                                                        <li class="e_smenu_content ">
+                                                                            <a target="_self" data-page="267853" href="/fr/banques/particuliers/assurances-CIC/index.html">
+                                                                                <b>Toutes nos offres d&#39;assurance</b></a>
+                                                                                </li>
+                                                                    </ul>
+                                                    
+                                                            </div>
+                                                            </li>
+                                                    </ul><ul class="e_menuCol2">
+                                                    <li class="e_menu_srub">
+                                                        <a target="_self" data-page="262746" href="#">
+                                                            Tout sur</a>
+                                                            <div class="e_smenu">
+                                                                                <ul>
+                                                                        
+                                                                        <li class="ei_mconseil_maison">
+                                                                            <a target="_self" data-page="262747" href="/fr/particuliers/cic-mission-immo.html">
+                                                                                Votre logement</a>
+                                                                                </li>
+                                                                    </ul>
+                                                    
+                                                            </div>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </li>
+                                
+                                <li class="e_menudepliant e_smenumiddle">
+                                    <a target="_self" data-page="150627" href="/fr/particuliers/mobile/forfaits-mobile-box.html">
+                                        Mobile</a>
+                                        </li>
+                                
+                                <li>
+                                    <a target="_self" data-page="150977" href="/fr/banques/particuliers/nous-contacter/simulations-souscriptions.html">
+                                        Simulations et souscriptions</a>
+                                        </li>
+                                
+                            </ul>
+            
+                    </div>
+                    </li>
+        </ul>
+<!-- /Menu.Net -->
+         </nav> 
+    </div> 
+    <div id="ei_tpl_contener">
+        <a id="ei_quicklink_content" tabindex="-1"></a>
+        <main id="ei_tpl_content" role="main">
+            <noscript><META HTTP-EQUIV="Refresh" CONTENT="0; URL=/fr/navigateur_javascript.html"></noscript>
+
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/devb_base.css"/>
+<script type="text/javascript" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/javascript/appli/responsiveMD.js"></script>
+<script type="text/javascript" src="https://cdnwmii.e-i.com/SITW/wm/global/1.0.0/WEBA/obsolete-tls.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_custom_responsive.css"/>
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/ei_custom_md.css"/>
+<link type="text/css" rel="stylesheet" href="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/css/appli/ei_custom_identification.css"/>
+
+<script type="text/javascript">
+/**************************** CONSOLE DEBUG ACTIVATION *************************************/
+if (!window.console) {
+    window.console = {};
+}
+else {
+    if (!window.console.debug && typeof window.console.log !== 'undefined') {
+        window.console.debug = window.console.log;
+    }
+}
+var names = ["log", "debug", "info", "warn", "error", "assert", "dir", "dirxml",
+    "group", "groupEnd", "time", "timeEnd", "count", "trace", "profile", "profileEnd"];
+for (var i = 0; i < names.length; ++i) {
+    if (!window.console[names[i]]) {
+        window.console[names[i]] = function() {};
+    }
+}
+/*******************************************************************************************/
+
+if (typeof jQuery == 'undefined') {
+    throw "Authentication required JQuery";
+}
+
+/* Array item's order should respect the order of the menu */
+var authApps = [];
+authApps.push({ baseId: 'password' , scriptMethodName: '', scriptLoaded: false});
+authApps.push({ baseId: 'ksign' , scriptMethodName: 'loadScriptsKSign', scriptLoaded: false});
+authApps.push({ baseId: 'safetrans' , scriptMethodName: 'loadScriptsSafetrans', scriptLoaded: false});
+
+/* url to codes acces oublies */
+var forgotAccessUrl = '';
+
+/* url to security infos */
+var infoSecurityUrl = '';
+
+/* url to webmaster informations bloc */
+var infoUrlPwd = '';
+var infoUrlKSign = '';
+var infoUrlKSafetrans = '';
+
+function showApps(index) {
+    if (index < 0) {
+        index = 0;  // Default is password
+    }
+
+    if (index < authApps.length) {
+        var $app = $('#' + authApps[index].baseId);
+        var $marketing = $(".ei_ident_marketing_" + authApps[index].baseId);
+        if ($app.length) {
+            if (authApps[index].scriptLoaded == false && authApps[index].scriptMethodName.length){
+                loadAsynchronousScripts(authApps[index].scriptMethodName);
+                authApps[index].scriptLoaded = true;
+            }
+            $app.css('display', '');
+            if ($marketing.length) {
+                $marketing.css('display', '');
+            }
+            $app.find('input:first').focus();
+            eraseCookie('lastCnx');
+            createCookie('lastCnx',authApps[index].baseId, 30)
+        }
+    }
+}
+
+function hideAllApps() {
+    var allApps = [];
+    // All DOM read
+    for (var i = 0; i < authApps.length; ++i) {
+        allApps.push({ $app: $('#' + authApps[i].baseId), $marketing: $(".ei_ident_marketing_" + authApps[i].baseId) });
+    }
+    // All DOM write
+    for (var i = 0; i < allApps.length; ++i) {
+        if (allApps[i].$app.length) {
+            allApps[i].$app.css('display', 'none');
+        }
+        if (allApps[i].$marketing.length) {
+            allApps[i].$marketing.css('display', 'none');
+        }
+    }
+}
+
+function loadAsynchronousScripts(name) {
+    if (typeof window[name] == 'function') {
+        // Call asynchronously
+        setTimeout(function() {
+            window[name]();
+        }, 0);
+    }
+}
+
+function mapAuthenticationModeToIndex(authenticationMode) {
+    var index = 0;
+    for (var i = 0; i < authApps.length; ++i) {
+        if (authApps[i].baseId == authenticationMode) {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; ++i) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function createCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    document.cookie = name + "=" + value + expires + "; path=/" + "; secure; ";
+}
+
+function eraseCookie(name) {
+    createCookie(name, "", -1);
+}
+
+function loadAsynchronousMarketingContent($marketingElement, url) {
+    if ($marketingElement.length) {
+        if (url.length == 0) {
+            $marketingElement.html('');
+            return;
+        }
+        $.ajax({
+            type: "get",
+            url: url,
+            success: function (html) {
+                $marketingElement.html(html);
+            },
+            error: function (e) {
+                $marketingElement.html('');
+            },
+            dataType: "html"
+        });
+    }
+}
+
+function setIdLien() {
+    /* Defaults spaces is Aucun then Particuliers */
+    /* In space Aucun */
+    forgotAccessUrl_aucun = "/fr/banques/assistance-technique.html";
+    infoSecurityUrl_aucun = "/fr/banques/internet-et-securite-bancaire/index.html";
+    infoUrlPwd_aucun = "/fr/async/informations_mdp.html";
+    infoUrlKSign_aucun = "/fr/async/informations_ksign.html";
+    infoUrlKSafetrans_aucun = "/fr/async/informations_safetrans.html";
+
+    /* In space Particuliers */
+    forgotAccessUrl_particulier = "/fr/banques/particuliers/nous-contacter/assistance-technique.html";
+    infoSecurityUrl_particulier = "/fr/banques/particuliers/internet-et-securite-bancaire/index.html";
+    infoUrlPwd_particulier = "/fr/async/particuliers/informations_mdp.html";
+    infoUrlKSign_particulier = "/fr/async/particuliers/informations_ksign.html";
+    infoUrlKSafetrans_particulier = "/fr/async/particuliers/informations_safetrans.html";
+
+    /* Default Values */
+    forgotAccessUrl = '';
+    infoSecurityUrl = (infoSecurityUrl_aucun == '') ? infoSecurityUrl_particulier : infoSecurityUrl_aucun;;
+    infoUrlPwd = '';
+    infoUrlKSign = '';
+    infoUrlKSafetrans = '';
+
+    var espace = null;
+    if (typeof getEspace == 'function') {
+        espace = getEspace();
+
+        if (espace != null) {
+            /* Set idlink according to space cookie value */
+            switch (espace){
+                    case "Professionnel":
+                        forgotAccessUrl = "/fr/banques/professionnels/nous-contacter/assistance-technique.html";
+                        infoUrlPwd = "/fr/async/professionnels/informations_mdp.html"
+                        infoUrlKSign = "/fr/async/professionnels/informations_ksign.html"
+                        infoUrlKSafetrans = "/fr/async/professionnels/informations_safetrans.html"
+                        break;
+                    case "Entreprise":
+                        forgotAccessUrl = "/fr/banques/entreprises/nous-contacter/assistance-technique.html";
+                        infoUrlPwd = "/fr/async/entreprises/informations_mdp.html"
+                        infoUrlKSign = "/fr/async/entreprises/informations_ksign.html"
+                        infoUrlKSafetrans = "/fr/async/entreprises/informations_safetrans.html"
+                        break;
+                    case "Grand compte":
+                        forgotAccessUrl = "/fr/banques/corporate/nous-contacter/assistance-technique.html";
+                        infoUrlPwd = "/fr/async/corporate/informations_mdp.html"
+                        infoUrlKSign = "/fr/async/corporate/informations_ksign.html"
+                        infoUrlKSafetrans = "/fr/async/corporate/informations_safetrans.html"
+                        break;
+                    case "Particulier":
+                        forgotAccessUrl = "/fr/banques/particuliers/nous-contacter/assistance-technique.html";
+                        infoUrlPwd = "/fr/async/particuliers/informations_mdp.html"
+                        infoUrlKSign = "/fr/async/particuliers/informations_ksign.html"
+                        infoUrlKSafetrans = "/fr/async/particuliers/informations_safetrans.html"
+                        break;
+                    case "Association":
+                        forgotAccessUrl = "/fr/banques/associations/nous-contacter/assistance-technique.html";
+                        infoUrlPwd = "/fr/async/associations/informations_mdp.html"
+                        infoUrlKSign = "/fr/async/associations/informations_ksign.html"
+                        infoUrlKSafetrans = "/fr/async/associations/informations_safetrans.html"
+                        break;
+                    default:
+                        break;
+            }
+        }
+    }
+
+    if (!forgotAccessUrl.length) {
+        forgotAccessUrl = (forgotAccessUrl_aucun == '') ? forgotAccessUrl_particulier : forgotAccessUrl_aucun;
+    }
+
+    if (!infoUrlPwd.length) {
+        infoUrlPwd = (infoUrlPwd_aucun == '') ? infoUrlPwd_particulier : infoUrlPwd_aucun;
+    }
+
+    if (!infoUrlKSign.length) {
+        infoUrlKSign = (infoUrlKSign_aucun == '') ? infoUrlKSign_particulier : infoUrlKSign_aucun;
+    }
+
+    if (!infoUrlKSafetrans.length) {
+        infoUrlKSafetrans = (infoUrlKSafetrans_aucun == '') ? infoUrlKSafetrans_particulier : infoUrlKSafetrans_aucun;
+    }
+}
+
+function redirectToLink(link) {
+    window.location = link;
+    return false;
+}
+
+$(document).ready(function(){
+
+    $('p.liensctx').append($("#exceptionalBreak").html());
+
+    setIdLien();
+
+    var $market_mdp_app = $(".ei_ident_marketing_password");
+    var $market_ksign_app = $(".ei_ident_marketing_ksign");
+    var $market_safetrans_app = $(".ei_ident_marketing_safetrans");
+    loadAsynchronousMarketingContent($market_mdp_app, infoUrlPwd);
+    loadAsynchronousMarketingContent($market_ksign_app, infoUrlKSign);
+    loadAsynchronousMarketingContent($market_safetrans_app, infoUrlKSafetrans);
+
+    var lastSelected = mapAuthenticationModeToIndex(getCookie("lastCnx"));
+    var selectedItemTxt = "selected_item_text";
+    var txt = $('div.ei_md li.ei_md_masteritem').eq(lastSelected).find('a.ei_md_masterlink').text();
+    contentloading(lastSelected, txt);
+
+    function contentloading(_index, _itemtxt) {
+        hideAllApps();
+        showApps(_index);
+
+        var txt = _itemtxt;
+        var ind = txt.indexOf(selectedItemTxt, 0);
+        if (ind > 0) {
+            txt = txt.substring(0,ind);
+        }
+        $('div.ei_md div.ei_md_detail #idTitre').text(txt);
+        if (lastSelected > -1) {
+            $('div.ei_md li.ei_md_masteritem').eq(lastSelected).removeClass("ei_md_selected");
+            $('div.ei_md li.ei_md_masteritem').eq(lastSelected).removeAttr('aria-current');
+            $('div.ei_md div.ei_md_mastertxt').eq(lastSelected).find('a.ei_md_masterlink').removeAttr('title');
+            $('div.ei_md div.ei_md_mastertxt').eq(lastSelected).find('a.ei_md_masterlink span').remove('.invisible');
+        }
+        if (_index > -1){
+            $('div.ei_md li.ei_md_masteritem').eq(_index).addClass("ei_md_selected");
+            $('div.ei_md li.ei_md_masteritem').eq(_index).attr('aria-current', 'true');
+            $('div.ei_md div.ei_md_mastertxt').eq(_index).find('a.ei_md_masterlink').attr('title',txt ).append('<span class="invisible">' + selectedItemTxt +'</span>');
+            lastSelected = _index;
+        }
+    }
+
+    $('div.ei_md li.ei_md_masteritem').click(function(e){
+        var indexItem = $('div.ei_md li.ei_md_masteritem').index($(this));
+        contentloading(indexItem, $(this).find('a.ei_md_masterlink').text());
+        return false;
+    });
+
+    $('div.ei_md div.ei_md_mastertxt a.ei_md_masterlink').focus(function(){
+        $(this).closest("div.ei_md_mastertxt").addClass("ei_md_hasfocus");
+    });
+
+    $('div.ei_md div.ei_md_mastertxt a.ei_md_masterlink').blur(function(){
+        $(this).closest("div.ei_md_mastertxt").removeClass("ei_md_hasfocus");
+    });
+
+    $('div.ei_md div.ei_md_mastertxt a.ei_md_masterlink').keydown(function(e){
+        if (e.which == 13) {
+            $(this).closest("li.ei_md_masteritem").trigger("click");
+            e.preventDefault();
+        }
+    });
+   /*
+    $('#bloc_ident').on('submit', function(e) {
+        e.preventDefault();
+
+        var $this = $(this);
+
+        var postParam =  {"loginPasswordAuthenticationRequest":{'applicationId': 'CM', 'login': $('#_userid').val(), 'password': $('#_pwduser').val(), 'media':'AN'}};
+
+        $.ajax({
+            url: '/fr/ws/login_password_ws.html',
+            type: 'POST',
+            data: JSON.stringify(postParam),
+            success: function(json) {
+                if (json.returnCode === 'Success') {
+                    redirectToLink('/fr/banque/pageaccueil.html');
+                } else {
+                    $(".blocpatience2").remove();
+                    $("#errorMessage").text(json.returnMessage);
+                    $(".errorMessageBlock").css('display', '');
+                }
+            },
+            error: function(xhr, textStatus, error) {
+                 $(".blocpatience2").remove();
+                 $("#errorMessage").text(error);
+                 $(".errorMessageBlock").css('display', '');
+            }
+        });
+    }); */
+});
+
+</script>
+
+    <div class="a_blocappli">
+    <div class="ei_titleblock ei_mdr_maintitle">
+        <div class="ei_titlelabelsblock">
+            <div class="ei_titlelabel"><p role="heading" aria-level="1">Espace client : Connexion</p></div>
+            <div class="ei_subtitlelabel"></div>
+        </div>
+        <div class="ei_titleactionsblock"></div>
+    </div>
+    <div class="a_blocfctl">
+        <div class="ei_md ei_mdr_formselectorlistbox">
+            <div class="ei_md_envtech">
+                <div class="ei_md_master">
+                    <div class="ei_md_masterbody">
+                        <ul class="ei_md_masterroot">
+                            <li class="ei_md_masteritem">
+                                <div class="ei_md_mastertxt"><a class="ei_md_masterlink" href="#">Identifiant / Mot de passe</a></div>
+                            </li>
+                            <li class="ei_md_masteritem">
+                                <div class="ei_md_mastertxt"><a class="ei_md_masterlink" href="#">Certificat Électronique</a></div>
+                            </li>
+                            <li class="ei_md_masteritem">
+                                <div class="ei_md_mastertxt"><a class="ei_md_masterlink" href="#" id="menu_safetrans">SAFETRANS</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ei_md_masterfooter"></div>
+                </div>
+
+                <div class="ei_md_nmaster">
+                    <div class="ei_ident_marketing_password"></div>
+                    <div class="ei_ident_marketing_ksign"></div>
+                    <div class="ei_ident_marketing_safetrans"></div>
+                </div>
+
+            </div>
+            <div class="ei_md_separator"></div>
+            <div class="ei_md_detail" tabindex="-1">
+                <!--Deb-->
+                <div class="ei_titleblock ei_mdr_titledetail">
+                    <div class="ei_titlelabelsblock">
+                        <div class="ei_titlelabel"><span id="idTitre" role="heading" aria-level="2"></span></div>
+                        <div class="ei_subtitlelabel"></div>
+                    </div>
+                </div>
+                <!--Fin-->
+                <div class="a_blocfctl" id="contentDetail">
+                    <div id="password">
+                        <div class="alerteBlock" style="display:none">
+                            <div class="bloctxt alerte eir_hidexs">
+                            </div>
+                             <div class="bloctxt alerte eir_showxs">
+                            </div>
+                        </div>
+
+                        <div class="errorMessageBlock bloctxt err" style="display:none"><span id="errorMessage"></span></div>
+                        <div>
+
+
+<div class="ei_appl_ident" id="ident">
+    
+    
+    
+    
+    
+    
+
+    
+    
+    <form method="post" autocomplete="off" onsubmit="return shouldSubmitForm()" name="bloc_ident" id="bloc_ident" action="">
+        <fieldset>
+            
+            <div class="ei_appl_ident_content">
+                
+                <div class="ei_appl_ident_lig">
+
+                    
+<label for="_userid">Identifiant</label>
+
+
+
+
+
+                    
+
+
+<input type="text" name="_cm_user" id="_userid" value="" placeholder="" class="ei_appl_userid" maxlength="48"/>
+
+
+
+
+
+
+
+
+
+
+                    
+                    <input type="hidden" name="flag" value="password"/>
+                    <input type="hidden" name="_charset_"/>
+                </div>
+                
+                <div class="ei_appl_ident_lig">
+
+                <label for="_pwduser">Mot de passe</label>
+
+                
+
+
+<span class="ei_inputpassword ei_inputpassword-reveal">
+
+<input type="password" name="password" id="_pwduser" placeholder="" class="ei_appl_pwduser" maxlength="64"/>
+
+     <button id="revealPasswordButton" type="button" title="Afficher le mot de passe" class="ei_inputpassword__reveal">
+          <span aria-hidden="true" class="ei_inputpassword__reveal-icon"></span>
+          <span class="ei_sronly">Afficher le mot de passe</span>
+     </button>
+</span>
+<script>
+    <!-- Script pour le composant InputPassword -->
+    var revealPasswordButton = document.getElementById("revealPasswordButton");
+    revealPasswordButton.addEventListener("click", function() {
+        var inputPassword = document.getElementById("_pwduser");
+        if (inputPassword.type === "password") {
+            inputPassword.type = "text";
+            $('#revealPasswordButton').attr('title', 'Masquer le mot de passe');
+            $('#revealPasswordButton .ei_sronly').html('Masquer le mot de passe');
+        } else {
+            inputPassword.type = "password";
+            $('#revealPasswordButton').attr('title', 'Afficher le mot de passe');
+            $('#revealPasswordButton .ei_sronly').html('Afficher le mot de passe');
+        }
+    });
+</script>
+
+
+
+
+
+                </div>
+                
+                
+
+                
+
+                <script type="text/javascript">
+                    var triggeredFormSubmit = false;
+                    var formSubmitted = false;
+
+                    function submitForm() {
+                        formSubmitted = true;
+                        document.getElementById("bloc_ident").submit();
+                    }
+
+                    function submitFormOrCaptcha() {
+                        
+                        
+                        
+                        submitForm();
+                        
+                    }
+
+                    function submitFormIfNecessary() {
+                        if (shouldSubmitForm()) {
+                            submitFormOrCaptcha();
+                        }
+                    }
+
+                    function shouldSubmitForm() {
+                        if (triggeredFormSubmit) {
+                            return false;
+                        }
+
+                        triggeredFormSubmit = true;
+
+                        if (formSubmitted) {
+                            return false;
+                        }
+
+                        
+                           
+                           
+                               esd1_displayWait('ident', 'Connexion en cours', 'Veuillez patienter');
+                           
+                       
+
+                       return true;
+                    }
+                </script>
+            </div>
+        </fieldset>
+
+        
+
+        
+
+        <div class="ei_appl_ident_blocbts blocboutons">
+            
+
+            <span class="ei_buttonbar">
+                
+                
+
+                <span class="ei_mainbuttons">
+    
+        <span id="login-submit" class="ei_button">
+            <a class="ei_btn" onclick="submitFormIfNecessary()" aria-labelledby="label-validate" role="button" href="#">
+                <span class="ei_btn_body" id="label-validate">
+                    <span class="ei_btn_tlcorn" role="presentation"></span>
+                    <span class="ei_btn_label">Se connecter</span>
+                    <span class="ei_iblock ei_btn_pic" role="presentation"> </span>
+                </span>
+                <span class="ei_btn_footer" role="presentation">
+                    <span class="ei_btn_blcorn" role="presentation"></span>
+                </span>
+            </a>
+        </span>
+        <script type="text/javascript">
+            var $bloc_ident = $("#bloc_ident");
+            // submit form with enter (13) key when focus is on identifier/password input
+            $bloc_ident.on("keydown", "input", function(e) {
+                if(e.keyCode == 13) {
+                    submitFormIfNecessary();
+                }
+            });
+
+            $('#login-submit').on('keypress', function(e) {
+                // enter (13) or space (32) key pressed
+                var enterOrSpacePressed = (e.keyCode == 13 || e.keyCode == 32);
+                if (enterOrSpacePressed) {
+                    submitFormIfNecessary();
+                    e.preventDefault(); // avoid scrolling when space key is pressedif (e.keyCode == 13) {
+                }
+            });
+
+            var $userid = $("#bloc_ident input[id=_userid]");
+            if ($userid.is(":visible")) {
+                $userid.focus();
+            }
+            else {
+                // case of memorized user id, set focus on password input
+                $("#bloc_ident input[id=_pwduser]").focus();
+            }
+        </script>
+    
+    
+</span>
+
+
+            </span>
+        </div>
+
+        
+
+        
+        <script>
+        if (typeof(dataLayer) == "undefined") var dataLayer = [];
+var page_name = "";
+var url_page = "";
+var space = "";
+var subspace = "";
+var env_template='FORMULAIRE';
+var application_name = "AUTHENTIFICATION";
+var url_page_en = "";
+var options = "";
+var subscription_form_step = "";
+var errors = "";
+var product_name = "";
+var utilisation_slider_montant = "";
+var utilisation_slider_duree = "";
+var utilisation_slider_mensualite = "";
+var prjcli_modification_projet = "";
+var prjcli_modification_nom_projet = "";
+var prjcli_modification_cin = "";
+var souscription_etape = "";
+var souscription_page_name = "";
+var montant = "";
+var validite = "";
+var periodicite = "";
+var choixcompte = "";
+var produit_reco = "";
+var sens = "";
+var modalite = "";
+var reglement = "";
+var nombre_parts = "";
+var montant_euros = "";
+var etre_informe = "";
+var concernant = "";
+var approximatif_maximum = "";
+var client_eligible = "";
+var conversion_funnel_step = "";
+var domaine_fonctionnel = "";
+var fonction  = "";
+var typepage = "";
+var kpi = "";
+var offre = "";
+var valeur = "";
+        </script>
+        
+    </form>
+    
+</div>
+
+
+
+
+</div>
+                        <p class="liensctx c">
+                            <a href="#" onclick="return redirectToLink(forgotAccessUrl);" class="ei_acces">Codes d&#39;accès oubliés</a>
+                            <a href="#" onclick="return redirectToLink(infoSecurityUrl);" class="ctx">Infos sécurité</a>
+                        </p>
+                    </div>
+                    <div id="ksign" style="display:none">
+                        <div class="c"><script>
+function loadScriptsKSign() {
+    $("#certificate_img").attr("src", "https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/appli/authent/certificat.png");
+}
+</script>
+
+<a href="https://cert.cic.fr/cic/fr/identification/client_cert.cgi" title="Connexion avec Certificat Électronique">
+    <img id="certificate_img" alt="Connexion avec Certificat Électronique" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/appli/authent/certificat.png" style="margin:10.5px 10px 10px" width="300" height="142"/>
+</a>
+<div class="bloctxt info">
+    <p><em>Pensez à introduire votre certificat avant de cliquer sur &#34;Se connecter&#34;.</em></p>
+</div>
+
+<div class="blocboutons">
+    <input type="image" alt="Se connecter" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/std/seconnecter.png" name="submit" onclick="eraseCookie(&#39;lastCnx&#39;); createCookie(&#39;lastCnx&#39;,&#39;ksign&#39;,365); location.href = &#39;https://cert.cic.fr/cic/fr/identification/client_cert.cgi&#39;"/>
+</div>
+</div>
+                        <p class="liensctx c">
+                            <a href="#" onclick="return redirectToLink(forgotAccessUrl);" class="ei_acces">Codes d&#39;accès oubliés</a>
+                            <a href="/fr/help_certificat_signature.html" class="ctx">Aide à la connexion</a>
+                            <a href="#" onclick="return redirectToLink(infoSecurityUrl);" class="ctx">Infos sécurité</a>
+                        </p>
+                    </div>
+                    <div id="safetrans" style="display:none">
+                        <div><script type="text/javascript">
+    function loadScriptsSafetrans() {
+        loadSafetransScript('https://cdnii.e-i.com/SDUT/sd/gemalto_ezio_web_connector/3110.21200.0/js/sconnect_uc.min.js');
+        loadSafetransScript('https://cdnii.e-i.com/SDUT/sd/gemalto_ezio_web_connector/3110.21200.0/js/pcsc_uc.min.js');
+        loadSafetransScript('https://cdnii.e-i.com/SDUT/sd/gemalto_ezio_web_connector/3110.21200.0/js/logging.min.js');
+        loadSafetransScript('https://cdnii.e-i.com/SDUT/sd/gemalto_ezio_web_connector/3110.21200.0/js/enex.min.js');
+        loadSafetransScript('https://cdnii.e-i.com/SDUT/sd/secure_channel/1.3.0/js/secure_channel.min.js', initializeSafetransScript);
+    }
+
+    function loadSafetransScript(url, callback) {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = false;
+        s.src = url;
+        if (typeof callback === 'function') {
+            s.onload = callback;
+        }
+        var x = document.getElementsByTagName('head')[0];
+        x.appendChild(s);
+    }
+
+    function initializeSafetransScript() {
+        // Initialize variable from secure_channel script
+        _serverCertificateSerialNumber = "_0205263240AC5579B4A5465B";
+        _gemaltoEzioWebConnectorCdnPath = "https://cdnii.e-i.com/SDUT/sd/gemalto_ezio_web_connector/3110.21200.0/";
+    }
+
+    var secureChannelIdentificationVerificator = null;
+
+    function SecureChannelIdentificationVerificator() {
+        this.styleVisible = document.getElementById("identification_form").style.display;
+    }
+
+    SecureChannelIdentificationVerificator.prototype.onReaderAvailable = function() {
+        document.getElementById("identification_form").style.display = "none";
+        document.getElementById("ejectCard").style.display="block";
+    }
+
+    SecureChannelIdentificationVerificator.prototype.onCardIn = function() {
+        document.getElementById("identification_form").style.display = "none";
+        document.getElementById("ejectCard").style.display="block";
+    }
+
+    SecureChannelIdentificationVerificator.prototype.onCardOut = function() {
+        document.getElementById("identification_form").style.display=this.styleVisible;
+        document.getElementById("ejectCard").style.display="none";
+    }
+
+    SecureChannelIdentificationVerificator.prototype.onReaderOut = function() {
+        document.getElementById("identification_form").style.display=this.styleVisible;
+        document.getElementById("ejectCard").style.display="none";
+    }
+
+    function SecureChannelIdentificationVerificatorLoad(id) {
+        secureChannelIdentificationVerificator = new SecureChannelIdentificationVerificator();
+        if (typeof(addApplication) == "function")
+        {
+            addApplication(secureChannelIdentificationVerificator, "SecureChannelIdentificationVerificator");
+        }
+        document.getElementById(id).focus();
+    };
+
+    window.onload = function() {
+        SecureChannelIdentificationVerificatorLoad('_userid');
+    }
+</script>
+
+
+
+
+<div class="ei_appl_ident" id="ident_safetrans" style="margin: 0px !important">
+    
+    <div id="ejectCard" style="display:none;" class="blocmsg info"><p>Veuillez retirer votre carte du lecteur</p></div>
+    <div id="identification_form">
+    
+    
+    <br/>
+    <form action="" method="post" autocomplete="off" onsubmit="return submitFormSafetrans()" name="bloc_ident_safetrans">
+        <fieldset>
+            <div class="ei_appl_ident_content">
+                <div class="ei_appl_ident_lig">
+                    <label for="_userid">Identifiant</label>
+                    <input type="text" name="_cm_user" id="_userid" class="ei_appl_userid" value=""/>
+                </div>
+                <div class="ei_appl_ident_lig">
+                    <label for="_pwduser">Mot de passe</label>
+                    <input type="password" name="password" id="_pwduser" class="ei_appl_pwduser"/>
+                    <input type="hidden" name="flag" value="safetrans"/>
+                </div>
+                <script type="text/javascript">
+                    document.forms["bloc_ident_safetrans"]._userid.focus();
+                    var formSubmitted = false;
+                    function submitFormSafetrans() {
+                        if (formSubmitted) {
+                            return false;
+                        } else {
+                            formSubmitted = true;
+                            return true;
+                        }
+                    }
+                </script>
+            </div>
+        </fieldset>
+        <div class="ei_appl_ident_blocbts">
+            <input type="image" onclick="esd1_displayWait(&#39;ident_safetrans&#39;, &#39;Chargement en cours&#39;, &#39;Veuillez patienter&#39;);" alt="Se connecter" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/std/seconnecter.png" name="submit"/>
+        </div>
+    </form>
+    </div>
+</div>
+
+<!-- Hub Transferts - SConnect installation message lightbox -->
+<div id="idLightBox">
+    <div class="ei_blocmodal" role="dialog" aria-describedby="idTitle">
+        <div class="a_blocfctltitre">
+            <p class="a_options">
+                <a class="btnclose" href="#" onclick="CloseLightBox(&#39;idLightBox&#39;)" id="btnclose"> <img alt="Fermer" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/std/btfermerpopup.png"/></a>
+            </p>
+            <p class="a_titre2" id="idTitle">Extension SConnect</p>
+        </div>
+        <div class="a_blocfctl" id="idContent" aria-describedby="idlibelle">
+            <div id="idlibelle">
+                <div>L&#39;extension SConnect n&#39;est pas installée sur votre poste.<br/><br/>Pour pouvoir utiliser votre lecteur SAFETRANS avec l&#39;application Hub Transferts, veuillez d&#39;abord procéder à l&#39;installation de l&#39;extension SConnect depuis votre navigateur Internet Explorer (ou Safari pour les utilisateurs Mac OS).</div>
+            </div>
+            <div class="blocboutons">
+                <br/>
+                <a href="#" onclick="CloseLightBox(&#39;idLightBox&#39;)" id="btnok"> <img alt="OK" src="https://cdnii.e-i.com/INGR/sd/cic_2015/30.104.6/fr/images/std/ok.gif"/> </a>
+            </div>
+        </div>
+        <span onfocus="$(&#39;#btnclose&#39;).focus();" role="presentation"> </span>
+    </div>
+</div>
+</div>
+                        <p class="liensctx c">
+                            <a href="#" onclick="return redirectToLink(forgotAccessUrl);" class="ei_acces">Codes d&#39;accès oubliés</a>
+                            <a href="/fr/identification/se-connecter-avec-un-lecteur-safetrans.html" class="ctx">Aide et diagnostic</a>
+                            <a href="#" onclick="return redirectToLink(infoSecurityUrl);" class="ctx">Infos sécurité</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ei_md_endseparator"></div>
+        </div>
+    </div>
+</div>
+
+        </main>
+    </div>
+    <div id="ei_tpl_footer">
+        <a id="ei_quicklink_footer" tabindex="-1"></a>
+        <footer role="contentinfo">
+            <div id="ei_tpl_footer1">
+    <ul>
+        <li class="ei_caisses"><a href="/fr/agences-et-distributeurs/trouver-une-agence.html">Agences et distributeurs</a></li>
+        <li class="ei_aide"><a href="/fr/banques/assistance-technique.html">Assistance</a></li>
+        <li class="ei_accessibilite"><a href="/fr/accessibilite/aide-et-accessibilite.html">Accessibilité</a></li>
+        <li class="ei_contact"><a href="/fr/banques/contacts.html">Contacts</a></li>
+        <li class="ei_newsletter"><a href="/fr/abonnements/newsletters.html" lang="en">Newsletter</a></li>
+        <li class="ei_reseaux"><a href="/fr/banques/le-cic-sur-les-reseaux-sociaux.html">Réseaux sociaux</a></li>
+		<li class="ei_assistance"><a href="">Fraude et sécurité bancaire</a></li>
+    </ul>
+</div>
+<div id="ei_tpl_footer2">
+    <ul>
+        <li id="ei_espacededies">
+            <div class="selectNav">
+                <button aria-expanded="false" aria-controls="selNavFoooter-ed" id="btn-selNavFoooter-ed" type="button">Espaces dédiés</button>
+                <ul role="region" hidden="hidden" id="selNavFoooter-ed" aria-labelledby="btn-selNavFoooter-ed">
+                    <li>
+                        <a href="/fr/banques/particuliers/index.html">Particuliers</a>
+                    </li>
+                    <li>
+                        <a href="/fr/banques/professionnels/index.html">Professionnels</a>
+                    </li>
+                    <li>
+                        <a href="/fr/banques/entreprises/index.html">Entreprises</a>
+                    </li>
+                    <li>
+                        <a href="/fr/banques/corporate/index.html">Corporate</a>
+                    </li>
+                    <li>
+                        <a href="/fr/banques/associations/index.html">Associations</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="selectNav">
+                <button aria-expanded="false" aria-controls="selNavFoooter-am" id="btn-selNavFoooter-am" type="button">Nos applications mobiles</button>
+                <ul role="region" hidden="hidden" id="selNavFoooter-am" aria-labelledby="btn-selNavFoooter-am">
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.cic_prod.bad">Android</a>
+                    </li>
+                    <li>
+                        <a href="https://itunes.apple.com/fr/app/appli-cic/id1436157872?mt=8">iPhone</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="selectNav">
+                <button aria-expanded="false" aria-controls="selNavFoooter-groupe" id="btn-selNavFoooter-groupe" type="button">Le groupe CIC</button>
+                <ul role="region" hidden="hidden" id="selNavFoooter-groupe" aria-labelledby="btn-selNavFoooter-groupe">
+                    <li>
+                        <a href="/fr/banques/institutionnel/carte-d-identite-du-CIC/index.html">Carte d’identite du CIC</a>
+                    </li>
+                    <li>
+                        <a href="/fr/banques/institutionnel/publications/index.html">Publications</a>
+                    </li>
+                    <li>
+                        <a href="/fr/banques/institutionnel/actionnaires-et-investisseurs/index.html">Actionnaires et investisseurs</a>
+                    </li>
+                    <li>
+                        <a href="/fr/banques/institutionnel/partenariats-et-mecenat/index.html">Partenariats et mécénat</a>
+                    </li>
+                    <li>
+                        <a href="/fr/banques/recrutement/index.html">Recrutement</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+            <div id="ei_tpl_footerlinks">
+    <ul>
+        <li><a id="aRecrutement" href="https://recrutement.cic.fr/fr/index.html" target="_blank" title="Recrutement, recrutement.cic.fr, nouvelle fenêtre" rel="noreferrer noopener">Recrutement</a></li>
+        <li><a href="/fr/informations-legales/tarifs.html">Tarifs et conditions générales</a></li>
+        <li><a href="/fr/plan-du-site.html">Plan du site</a></li>
+        <li><a href="/fr/informations-legales/mentions-legales.html">Mentions légales</a></li>
+        <li><a href="/fr/informations-legales/index.html">Informations réglementaires</a></li>
+        <li><a href="/fr/protection-des-donnees-personnelles/index.html">Protection des données</a></li>
+        <li><a href="/fr/informations-legales/gestion-des-cookies.html">Gestion des cookies</a></li>
+        <li><a href="/fr/accessibilite/declaration-accessibilite.html">Accessibilité : Partiellement conforme</a></li>
+        <li class="ei_sm_footer_line"> </li>
+    </ul>
+    <script type="text/javascript">
+        var serveur = window.location.hostname.slice(0,4);
+        if(serveur == "tst-" || serveur == "sit-" || serveur == "rqt-"){
+            var eltLienRecrutement = document.getElementById("aRecrutement");
+            eltLienRecrutement.setAttribute("href", eltLienRecrutement.getAttribute("href").replace("//recrutement","//"+serveur+"recrutement"));
+            eltLienRecrutement.setAttribute("title", eltLienRecrutement.getAttribute("title").replace("recrutement.",serveur+"recrutement."));
+        }
+    </script>
+    <span class="invisible">Choix d&#39;une langue</span>
+    <ul id="ei_tpl_lang">
+        <li class="e-select"><span>FR</span></li>
+        <li><a href="/en/" lang="en" hreflang="en" aria-label="Go to english version" title="Go to english version">EN</a></li>
+        <li><a href="/de/" lang="de" hreflang="de" aria-label="Zur deutschen version" title="Zur deutschen version">DE</a></li>
+        <li><a href="/es/" lang="es" hreflang="es" aria-label="Ir a la versión en español" title="Ir a la versión en español">ES</a></li>
+    </ul>
+    <div class="nof"></div>
+    <a title="Retour en haut de page" aria-label="Retour en haut de page" id="ei_tpl_hpage" href="#ei_tpl_fullsite">
+        <span class="ei_sronly">Retour en haut de page</span>
+        <span class="ei_toplink_glyph" aria-hidden="true"></span>
+    </a>
+</div>
+        </footer>
+    </div>
+</div>
+
+	<script type="text/javascript">
+		var cookiePolicyLink = '/fr/informations-legales/gestion-des-cookies.html';
+	</script>
+
+
+<!-- Datasinks V1 -->
+<script type="text/javascript">
+    if (typeof eia === "function") {
+        var data = {};
+        if (typeof watData !== "undefined") {
+            var mapping = {"d1":"espace","d12":"env_langue","d15":"env_espace","d16":"typepage","d18":"statutuser","d19":"substitution_mode","d197":"product_code_promo","d194":"page_cat1","d193":"page_cat2","d192":"page_cat3","d191":"page_cat4","d190":"page_cat5"};
+            for (var key in mapping) {
+                var wat_key = mapping[key];
+                if (watData.hasOwnProperty(wat_key)) {
+                    data[key] = watData[wat_key];
+                }
+            }
+        }
+        eia("record", "Page Viewed", data);
+    }
+</script>
+<!-- Datasinks V1 -->
+<!-- Datasinks V2 -->
+<script type="text/javascript">
+    if (typeof ds === "function") {
+        var ds_data = {};
+        if (typeof watData !== "undefined") {
+            var mapping = ["espace","env_langue","env_espace","typepage","statutuser","substitution_mode","product_code_promo","page_cat1","page_cat2","page_cat3","page_cat4","page_cat5","application_path"];
+            for (var key in mapping) {
+                var wat_key = mapping[key];
+                if (watData.hasOwnProperty(wat_key)) {
+                    ds_data[wat_key] = watData[wat_key];
+                }
+            }
+        }
+        page_info = {
+            page_current_url: document.location.href.split('?')[0],
+            page_source_url: document.referrer.split('?')[0],
+            page_path: document.location.pathname,
+            page_title: document.title
+        };
+        ds_data = $.extend(page_info, ds_data);
+        ds()("record", "page_viewed", ds_data);
+    }
+</script>
+<!-- Datasinks V2 -->
+
+<!-- ei-msgs-chat -->
+
+
+</body></html>
